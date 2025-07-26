@@ -1,0 +1,174 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+/*------------------------------------
+    Estilo Global
+------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend', arial;
+    color: #222;
+    font-size: 14px;
+    box-sizing: border-box; }
+
+/*------------------------------------
+    Variáveis
+------------------------------------*/
+:root {
+    --corPrincipal: #504b4b; }
+
+/*------------------------------------
+        Barra de Rolagem
+------------------------------------*/
+::-webkit-scrollbar { 
+    height: 6px; 
+    width: 0; }
+::-webkit-scrollbar-track { 
+    background: transparent; }
+::-webkit-scrollbar-thumb {
+    background: #6b6b6b; }
+::-webkit-scrollbar-thumb:hover { 
+    background: #222; }
+
+/*------------------------------------
+        Foco
+------------------------------------*/
+:focus{ 
+    outline: none; }
+
+/*------------------------------------
+        Body
+------------------------------------*/
+body {
+    width: 100%;
+    height: 100vh;
+    background: whitesmoke }
+
+/*------------------------------------
+        Main
+------------------------------------*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 20px 20px 80px;
+    max-width: 500px;
+    margin: auto; }
+/*------------------------------------
+        H1
+------------------------------------*/
+h1 {
+    color: var(--corPrincipal);
+    font-size: 25px;
+    margin-bottom: 10px; }
+/*------------------------------------
+        A e B
+------------------------------------*/
+a { text-decoration: none; }
+b { color: var(--corPrincipal); }
+
+/*------------------------------------
+    Input & Button & Select
+------------------------------------*/
+input , button , select {
+    background: white;
+    border: solid 1px #222;
+    height: 30px; }
+
+/*------------------------------------
+    Input - Type Texto e Número
+------------------------------------*/
+input[type="number"] , input[type="text"] , input[type="password"] {
+    padding: 0px 5px;
+    height: 30px; }
+
+/*------------------------------------
+    Overlay
+------------------------------------*/
+.overlay {
+    z-index: 998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #00000099; }
+
+/*------------------------------------
+    Estilo Botão
+------------------------------------*/
+.estiloBotao  {
+    background: var(--corPrincipal);
+    color: white;
+    font-weight: 700;
+    width: 80px;
+    height: 30px ;
+    cursor: pointer;
+    margin: 10px 5px; }
+
+.estiloBotao:hover {
+box-shadow: 1px 1px 10px #00000099; }
+
+/*------------------------------------
+    Botão Engrenagem
+------------------------------------*/
+.botaoEngrenagem  {
+    width: 35px;
+    height: 30px;
+    font-size: 18px;
+    margin: 0; }
+
+/*------------------------------------
+    Opções de Engrenagem
+------------------------------------*/
+.opcoesEngrenagem {
+    position: absolute;
+    flex-direction: column;
+    width: 120px;
+    margin-top: 5px;
+    background: whitesmoke;
+    border: 1px solid #222; }
+.opcao {
+    width: 100%;
+    height: 30px;
+    border: none; }
+.opcao:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*------------------------------------
+    Tabela
+------------------------------------*/
+table { width: 100%; border-collapse: collapse; }
+
+thead > tr > td { 
+    font-weight: bold;
+    text-align: center; }
+
+td {
+    background: white;
+    max-width: 100px;
+    height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 2px 5px;
+    border: solid 1px #222;}
+
+.col-acao { width: 40px; }
+
+
+/* Estilo para a linha da tabela que está sendo arrastada */
+.dragging {
+    opacity: 0.5; /* Torna a tarefa arrastada semi-transparente */
+    border: 2px dashed var(--corPrincipal); /* Adiciona uma borda tracejada */
+}
+
+/* Estilo para indicar onde a tarefa será solta */
+.drag-over {
+    background-color: #e0e0e0; /* Fundo cinza claro */
+    border-top: 2px solid var(--corPrincipal); /* Linha indicando a posição */
+}
