@@ -16,7 +16,7 @@
     Variáveis
 ------------------------------------*/
 :root {
-    --corPrincipal: #504b4b; }
+    --corPrincipal: #638fa5; }
 
 /*------------------------------------
         Barra de Rolagem
@@ -61,7 +61,8 @@ main {
 ------------------------------------*/
 h1 {
     color: var(--corPrincipal);
-    font-size: 25px;
+    font-size: 50px;
+    text-shadow: 3px 3px #222;
     margin-bottom: 10px; }
 /*------------------------------------
         A e B
